@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+				<meta charset="UTF-8">
+				<title>Counter App</title>
+				<style>
+								body{
+								display:grid;
+								place-items:center;
+								padding:0;
+								margin:0;
+								
+								}
+								.container{
+								height:100%;
+								width:100%;
+								}
+								.counter-box{
+								height:700px;
+								width:600px;
+								margin:150px 150px;
+								padding:20px 20px;
+								background-color:aquamarine;
+								box-sizing:border-box;
+					box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+								justify-content:center;
+								align-itmes:center;
+								}
+								.btn{
+							margin-left:130px;
+							margin-top:40px;						
+							cursor:pointer;
+				
+								}
+							#increment{
+							padding-top:10px;
+							padding-bottom:10px;
+							padding-left:45px;
+							padding-right:45px;
+							background-color: deepskyblue;
+							border:none;
+							border-radius:12px;
+							box-shadow:0px 4px 4px #565656;
+							}
+							 #decrement{
+							 padding-top:10px;
+							 padding-bottom:10px;
+							 background-color:deepskyblue;
+							 border: none;
+							 border-radius:12px;
+							 box-shadow: 0px  4px 4px #565656;
+							 }
+							 .main{
+							 height:50px;
+							 width:50px;
+							 }
+							 #box2{
+							 height:300px;
+								width:330px;
+							margin:50px 100px;
+								padding:40px 20px 10px 30px;
+								background-color:white;
+								box-sizing:border-box;
+								justify-content:center;
+								align-itmes:center;
+								box-shadow: 0px 0px 4px 4px #565656;
+							 }
+							 #diclare{
+					
+						padding-left:50px;
+						font-size:35px;
+						color:green;
+						position: absolute;
+				
+							 }
+							 #countervalue{
+							 padding-top:50px;
+							 padding-left:100px;
+							 font-size:100px;
+							 color:deepskyblue;
+							 }
+							 .resetbtn{
+						  padding-left:230px;
+							 padding-top:350px;
+						
+							 
+							 }
+							 #reset{
+							 padding-top:10px;
+							 padding-bottom:10px;
+							 padding-left:40px;
+							 padding-right:45px;
+							 border:none;
+							 border-radius:25px;
+							 background-color:orange;
+							 box-shadow:3px 3px #565656;
+							 }
+				</style>
+</head>
+<body>
+				<div calss="container">
+								<div class="counter-box">
+												<div class="btn">
+		<button style="padding-right:30px;padding-left:30px;margin-right:40px"id="increment">Increase</button>
+	<button style="padding-right:30px;padding-left:30px" id="decrement">Decrease</button>
+																
+												</div>
+												<div class="main">
+																<div id="box2">
+				<h1 id="diclare" >Counter App</h1>
+												<h1 id="countervalue">0</h1>
+												</div>
+												</div>
+												<div class="resetbtn">
+							<button id="reset">Reset</button>
+								</div>
+							</div>
+				</div>
+				<script>
+		let increment=document.querySelector("#increment");
+let decrement = document.querySelector("#decrement");
+let countervalue = document.querySelector("#countervalue");
+let reset = document.querySelector("#reset");
+
+let counter = 0;
+//function for increment
+increment.addEventListener("click" , ()=>{
+    counter++;
+    countervalue.innerText = counter;
+})
+;
+//Function for Decrement
+decrement.addEventListener("click" , ()=>{
+    counter--;
+    countervalue.innerText = counter;
+});
+//Function for Reset
+reset.addEventListener("click" , ()=>{
+counter = 0;
+countervalue.innerText = counter;
+});
+
+</script>
+
+</body>
+</html>
